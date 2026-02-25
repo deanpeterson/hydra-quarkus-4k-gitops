@@ -1,0 +1,6 @@
+apiVersion: "pipelinesascode.tekton.dev/v1alpha1"
+kind: Repository
+metadata:
+  name: hydra-quarkus-4k-repository
+spec:
+  url: https://github.com/deanpeterson/hydra-quarkus-4k

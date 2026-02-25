@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: hydra-quarkus-4k-gitops
+  description: This is GitOps manifest for hydra-quarkus-4k   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: tssc/gitops=hydra-quarkus-4k
+    backstage.io/kubernetes-id: hydra-quarkus-4k 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: hydra-quarkus-4k
+spec:
+  type: gitops
+  owner: user:default/deanpeterson 
+  lifecycle: experimental
+  dependsOn:
+    - component:hydra-quarkus-4k
